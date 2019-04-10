@@ -4,7 +4,7 @@ Web API with Express for generate hash, encryption, salts and iv. I used bcrypt 
 
 This app use Babel to transpile ES6 and nodemon running in script.
 
-### Installation
+## Installation
 
 
 ```shell
@@ -23,12 +23,19 @@ Consider read notes about of the cost of processing with bcrypt, read into offic
 
 https://www.npmjs.com/package/bcrypt#a-note-on-rounds
 
+### Testing
 
-...
+Import postman_collection.json in your Postman, the urls from app and payloads are formatted for your tests.
 
-Documentations
+
+### Documentations
 
 https://nodejs.org/api/crypto.html
 
 https://www.npmjs.com/package/bcrypt
+
+
+
+
+F
 
