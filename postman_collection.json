@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b9aae50f-5e91-4c1a-af48-47b2b8fc14b5",
+		"name": "API Encrypt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/hash",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"334455\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/hash",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"hash"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hash/compare",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"334455\",\n\t\"hash\": \"$2b$12$oRUE.D9ugQt99LQ3VLRIZ.UkZrOteNF8EZYoCy6wLcZTWXBKyUfb2\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/hash/compare",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"hash",
+						"compare"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/encrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"4427142681257884,333,1125,ANYWHERE CUSTOMER NAME\",\n    \"salt\": \"c12a199c7c7f96151c9718c0c715316be6baac8adb4ae4a1556a1acc675a4677\",\n    \"iv\": \"b5213ebf3dbb3ef12e53be001859e7de\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/decrypt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"e037752fb1b37fc5048c50a34122d74d42b7e20bc1b9cdc94c9cbf827fc83e3a46915b7cc6fca652d08f9f32cdea9f49\",\n    \"salt\": \"c12a199c7c7f96151c9718c0c715316be6baac8adb4ae4a1556a1acc675a4677\",\n    \"iv\": \"b5213ebf3dbb3ef12e53be001859e7de\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/keys",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"334455\",\n\t\"salt\": \"\",\n\t\"iv\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/keys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"keys"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
