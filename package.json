@@ -1,0 +1,40 @@
+{
+  "name": "nodejs-api-encrypt",
+  "version": "1.0.0",
+  "description": "Web API with Express for generate hash, encryption, salts and iv.",
+  "scripts": {
+    "start": "node ./build/app.js",
+    "debug": "npm run build && nodemon --exec babel-node src/app.js --inspect",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && babel src --ignore=src/test --out-dir=build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielcsrs/nodejs-api-encrypt.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "crypto",
+    "bcrypt"
+  ],
+  "author": "@danielcsrs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielcsrs/nodejs-api-encrypt/issues"
+  },
+  "homepage": "https://github.com/danielcsrs/nodejs-api-encrypt#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "http-status": "^1.3.2",
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.11"
+  }
+}
